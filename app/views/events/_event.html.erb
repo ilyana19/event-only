@@ -1,6 +1,11 @@
-# check db/schema.rb for the list of fields/properties
+<!-- # check db/schema.rb for the list of fields/properties -->
+
 <div class="event">
-  <h4><%= event.name %> (<%= event.city %>)</h4>
-  <p>Date: <%= event.date %><br />
-  Capacity: <%= event.capacity %></p>
+  <p>
+    <%= link_to(event) do %>
+      <strong><%= event.name %> (<%= event.city %>)</strong><br />
+    <% end %>
+    Date: <%= event.date %><br />
+    Capacity: <%= event.capacity %>
+  </p>
 </div>

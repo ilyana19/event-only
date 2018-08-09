@@ -1,7 +1,9 @@
 events#index page
 
-# loop through events object and render each individual event with the partial formatting
+<p><%= link_to "Add New event", new_event_path %><p>
+
+<!-- loop through events object and render each individual event with the partial formatting -->
 <% @events.each do |event| %>
-  # render 'event' partial, pass in the indiviual object of the event
+  <!-- # render 'event' partial, pass in the indiviual object of the event -->
   <%= render 'event', event: event %>
 <% end %>
