@@ -1,3 +1,8 @@
 events#show page
 
+<p>
+  <%= link_to 'Edit', edit_event_path %> |
+  <%= link_to 'Back to Main', events_path %>
+</p>
+
 <%= render 'event', event: @event %>
