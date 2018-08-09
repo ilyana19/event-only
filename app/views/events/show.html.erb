@@ -1,8 +1,9 @@
 events#show page
 
 <p>
+  <%= link_to 'Back to Main', events_path %> |
   <%= link_to 'Edit', edit_event_path %> |
-  <%= link_to 'Back to Main', events_path %>
+  <%= link_to 'Delete', event_path(@event), method: :delete, data: {confirm: "Are you sure you want to delete #{@event.name}? This cannot be undone!"} %>
 </p>
 
 <%= render 'event', event: @event %>
